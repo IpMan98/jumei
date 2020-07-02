@@ -223,7 +223,9 @@ body {
                 background: #fff;
                 position: relative;
                 margin-right: 18px;
-
+                &:hover{
+                    box-shadow: 0 2px 17px rgba(000,000,000,.3);
+                }
                 .pro_left {
                     margin-right: 3%;
                     float: left;
@@ -250,6 +252,10 @@ body {
                     padding-top: 17px;
 
                     a {
+                        em {
+                            font-style: normal;
+                        }
+
                         .flag_box {
                             border-bottom: 1px #eee solid;
                             width: 100%;
@@ -271,25 +277,121 @@ body {
                                     margin-top: -2px;
                                     border: 1px solid #eee;
                                 }
-                                .flag_text{
+
+                                .flag_text {
                                     float: left;
                                 }
                             }
-                            .numtimer_box{
+
+                            .numtimer_box {
                                 text-align: right;
                                 color: #414141;
-                                .buy_num{
+
+                                .buy_num {
                                     text-align: right;
                                     color: #414141;
                                 }
-                                em{
+
+                                em {
                                     color: #ec2b8c;
                                     font-weight: 800;
                                     font-style: normal;
                                 }
                             }
                         }
-                        
+
+                        .pro_eng_tit {
+                            font-size: 14px;
+                            color: #afaeae;
+                            overflow: hidden;
+                            height: 18px;
+                        }
+
+                        .pro_des {
+                            font-size: 15px;
+                            line-height: 27px;
+                            color: #393939;
+                            height: 110px;
+                            overflow: hidden;
+                            padding-top: 5px;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                            margin-bottom: 15px;
+                        }
+
+                        .r_pric_box {
+                            height: 54px;
+                            width: 345px;
+                            overflow: hidden;
+
+                            .big_pic {
+                                font-size: 36px;
+                                color: #ec2b8c;
+
+                                span {
+                                    font-size: 20px;
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .original {
+                                color: #5d5d5d;
+                                text-decoration: line-through;
+                                font-size: 16px;
+                            }
+
+                            .org_cx {
+                                height: 17px;
+                                width: 30px;
+                                background: #efbe53;
+                                padding: 2px 4px;
+                                padding-top: 4px;
+                                color: #fff;
+                                vertical-align: 3px;
+                                margin-left: 3px;
+                            }
+                        }
+
+                        .advance_head {
+                            color: #afaeae;
+                            width: 320px;
+                            display: inline-block;
+                            float: left;
+                            font-size: 13px;
+
+                            span {
+                                margin-right: 20px;
+                                float: left;
+                                margin-top: 8px;
+
+                                em {
+                                    font-size: 16px;
+                                    color: #393939;
+                                    padding-right: 3px;
+                                }
+                            }
+                        }
+
+                        .shopping_car_layout {
+                            bottom: 41px;
+                            right: 45px;
+                            width: 70px;
+                        }
+                    }
+
+                    .shopping_car_layout {
+                        position: absolute;
+                        bottom: 41px;
+                        right: 45px;
+                        width: 70px;
+                        .advance_car_btn{
+                            background-image: url(../imgs/index_cbtn.png);
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            background-position: -75px 0;
+                            width: 63px;
+                            height: 63px;
+                        }
                     }
                 }
             }

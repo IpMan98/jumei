@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2020-07-02 18:27:05
+Date: 2020-07-02 19:56:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -70,7 +70,7 @@ CREATE TABLE `list` (
 -- Records of list
 -- ----------------------------
 INSERT INTO `list` VALUES ('1', 'http://p1.global.jmstatic.com/product/004/937/4937888_std/4937888_dx_640_400.jpg', 'The Ordinary  五胜肽抗衰老精华', 'The Ordinary （10%五胜肽+透明质酸）抗衰老精华 30ml，当红炸子鸡The Ordinary可谓风头无两,清一色的快速急救型猛药路线让它一夜之间红遍油管&amp;ins用过的妹子都化身移动的人形种草机,自然界中的尖子生。使其逐渐升级为护肤成分党心中的大佬。', '149', '398', '4');
-INSERT INTO `list` VALUES ('2', 'http://a2.global.jmstatic.com/c23400d332c64c11/index_cbtn.png', 'The Ordinary 30%果酸+2%水杨酸', 'The Ordinary 30%果酸+2%水杨酸焕肤面膜 30ml，在这个精华动辄上千的时代，被称为欧美护肤界的“原料桶”的The Ordinary。凭借真材实料+良心价格 获得一票好评，性价比高出天际，无论多贵的护肤，在这里都能找到效果相同平价代替。', '119', '214', '3');
+INSERT INTO `list` VALUES ('2', 'http://p1.global.jmstatic.com/product/004/937/4937890_std/4937890_dx_640_400.jpg', 'The Ordinary 30%果酸+2%水杨酸', 'The Ordinary 30%果酸+2%水杨酸焕肤面膜 30ml，在这个精华动辄上千的时代，被称为欧美护肤界的“原料桶”的The Ordinary。凭借真材实料+良心价格 获得一票好评，性价比高出天际，无论多贵的护肤，在这里都能找到效果相同平价代替。', '119', '214', '3');
 INSERT INTO `list` VALUES ('3', 'http://p1.global.jmstatic.com/product/004/962/4962954_std/4962954_dx_640_400.jpg', 'This works睡眠喷雾-加强版', '除了安眠药与裸睡，你还有第三种快速入眠的选择~thisworks英国名门品牌，女人皮肤全靠养，只要轻轻一喷，轻松拥有香甜的好睡眠。', '179', '368', '5');
 INSERT INTO `list` VALUES ('4', 'http://p1.global.jmstatic.com/product/004/963/4963026_std/4963026_dx_640_400.jpg', 'Hairfinity护发素355ml', '【卡戴珊家族挚爱，名流享受】 HAIRFINITY防脱修复护发素，无硅油护发素，头皮可用，富含大量植物精华，深层护理头皮和毛囊，柔顺丝滑轻盈', '109', '199', '6');
 INSERT INTO `list` VALUES ('5', 'http://p1.global.jmstatic.com/product/005/012/5012740_std/5012740_dx_640_400.jpg', 'Hairfinity护发发膜', 'Hairfinity护发发膜', '209', '355', '7');

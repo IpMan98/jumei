@@ -68,12 +68,12 @@
                     </div>
                 </div>
             </div>
-            <div class="brand_list_box">
+            <div class="brand_list_box" id="goodslist">
                 <div class="b_list_title">
                     <div class="img tennew"></div>
                 </div>
 
-                <div class="product_introduce">
+                <div class="product_introduce" >
                     <div class="pro_left">
                         <a href="#">
                             <img src="../imgs/4937888_dx_640_400.jpg" alt="">
@@ -98,10 +98,10 @@
                             </div>
                             <p class="pro_eng_tit">
                                 <span class="f15">
-                                    The Ordinary 五胜肽抗衰老精华 </span>
+                                    The Ordinary 五胜肽抗衰老精华 
+                                </span>
                             </p>
                             <p class="pro_des  ">
-
                                 The Ordinary （10%五胜肽+透明质酸）抗衰老精华 30ml，当红炸子鸡The
                                 Ordinary可谓风头无两,清一色的快速急救型猛药路线让它一夜之间红遍油管&amp;amp;ins用过的妹子都化身移动的人形种草机,自然界中的尖子生。使其逐渐升级为护肤成分党心中的大佬。
                             </p>
@@ -109,17 +109,17 @@
                                 <div class="r_pric_box">
                                     <em class="big_pic">
                                         <span class="currency_arial">¥</span>119 </em>
-
                                     <span class="original">￥214</span>
-
                                     <span class="org_cx">包邮</span>
                                 </div>
-
                                 <div class="advance_head">
                                     <span><em>15</em>人已购买</span>
-
                                 </div>
-
+                            </div>                           
+                        </a>
+                        <a href="#">
+                            <div class="shopping_car_layout">
+                                <b class="advance_car_btn"></b>
                             </div>
                         </a>
                     </div>
@@ -128,5 +128,71 @@
             </div>
         </div>
 </body>
+<script src="../script/ajax.js"></script>
+<script>
+    var goodsList = document.querySelector("#goodslist");
+ajax({
+    url:'../imgs/list2.php',
+    type:'get',
+    success:function(data){
+        var json = JSON.parse(data);
+       console.log(json);
+       for(var i= 0;i<json.length;i++){
+          goodsList.innerHTML += `
+          <div class="product_introduce" >
+          <div class="pro_left">
+                        <a href="#">
+                            <img src="${json[i].list_img}" alt="">
+                        </a>
+                    </div>
+                    <div class="pro_right">
+                        <a href="#">
+                            <div class="flag_box">
+                                <div class="flag_box_main">
+                                    <img src="../imgs/067_flag.jpg" alt="">
+                                    <ul class="falg_text">
+                                        <li>CANADA</li>
+                                        <li>加拿大品牌</li>
+                                    </ul>
+                                </div>
+                                <div class="numtimer_box">
+                                    <span class="buy_num">距结束还剩</span>
+                                    <i></i>
+                                    <span class="dddd"
+                                        diff="64759"><em>00</em>天<em>16</em>时<em>05</em>分<em>52</em>秒</span>
+                                </div>
+                            </div>
+                            <p class="pro_eng_tit">
+                                <span class="f15">
+                                    ${json[i].list_tit}
+                                </span>
+                            </p>
+                            <p class="pro_des  ">
+                                ${json[i].list_det}
+                            </p>
+                            <div class="price_dis clearfix">
+                                <div class="r_pric_box">
+                                    <em class="big_pic">
+                                        <span class="currency_arial">¥</span>${json[i].list_npic} </em>
+                                    <span class="original">￥${json[i].list_opic}</span>
+                                    <span class="org_cx">包邮</span>
+                                </div>
+                                <div class="advance_head">
+                                    <span><em>15</em>人已购买</span>
+                                </div>
+                            </div>                           
+                        </a>
+                        <a href="#">
+                            <div class="shopping_car_layout">
+                                <b class="advance_car_btn"></b>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+          `
+       }
+    }
+})
+</script>
 
 </html>
