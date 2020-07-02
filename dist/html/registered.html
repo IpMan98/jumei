@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/registered.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header_container">
+        <!--新版的login页面没有头部 -->
+        <div id="logo">
+            <a href="index.html" id="home" title="聚美优品"> 化妆品品牌排行榜大全网站聚美优品 </a>
+            <div class="header_logo_box">
+                <a href="#" rel="nofollow" class="top_link lightning" target="_blank"></a>
+                <a href="#" rel="nofollow" class="top_link gild" target="_blank"></a>
+                <a href="#" rel="nofollow" class="top_link credit" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+    <div class="con-ter">
+        <div class="center-con">
+            <a href="#" class="signup_link">
+
+            </a>
+            <div class="loginBord">
+                <div class="loginTit">
+                    <div class="tosignup">已有帐号<a href="login.html" id="login">在此登录</a></div>
+                    <h1><strong>用户注册</strong></h1>
+                </div>
+                <div class="regis">
+                    <div>
+                        <input type="text" placeholder="手机号" id="user">
+                        <p></p>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="密码" id="pass">
+                        <p></p>
+                    </div>
+
+                    <div>
+                        <input type="password" placeholder="确认密码" id="repass">
+                        <p class="text"></p>
+                    </div>
+                    <input type="button" value="同意协议并注册" id="btn">
+                </div>
+                <p>
+                    <a href="#" rel="nofollow" target="_blank" style="color:#ed145b;">《聚美优品用户协议》</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" rel="nofollow" target="_blank" style="color:#ed145b;">《聚美隐私权政策》</a>
+                </p>
+                <div class="shadow_l"></div>
+                <div class="shadow_r"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../script/ajax.js"></script>
+<script>
+    var pass = document.querySelector('#pass');
+    var user = document.querySelector('#user');
+    var repass = document.querySelector('#repass');
+    var btn = document.querySelector('#btn');
+    var userF;
+    var passF;
+    var repassF;
+    user.onblur = function () {
+        if (!user.value) {
+            this.nextElementSibling.innerHTML = '用户名不能为空',
+                this.nextElementSibling.style.color = 'red';
+            userF = false;
+        }
+    }
+    user.onfocus = function () {
+        this.nextElementSibling.innerHTML = '';
+        userF = true;
+    }
+    pass.onblur = function () {
+        if (!pass.value) {
+            this.nextElementSibling.innerHTML = '密码不能为空',
+                this.nextElementSibling.style.color = 'red';
+            passF = false
+        }
+    }
+    pass.onfocus = function () {
+        this.nextElementSibling.innerHTML = '';
+        passF = true
+    }
+    repass.onblur = function () {
+        if (pass.value != repass.value) {
+            this.nextElementSibling.innerText = '密码不相同',
+                this.nextElementSibling.style.color = 'red';
+            repassF = false
+        }
+    }
+    repass.onfocus = function () {
+        this.nextElementSibling.innerHTML = '';
+        repassF = true
+    }
+    btn.onclick = function () {
+        if (userF && passF && repassF) {
+            console.log(123)
+            ajax({
+                url: '../imgs/regist.php',
+                type: 'get',
+                data: {
+                    'type': 'add',
+                    'user': user.value,
+                    'pass': pass.value
+                },
+                success: function (data) {
+                    console.log(data);
+                    var json = JSON.parse(data);
+                    if (json.err === 0) {
+                        alert('注册成功,即将跳转至登录页...');
+                        setTimeout(function () {
+                            location.href = 'login.html'
+                        }, 3000)
+                    }
+                }
+            })
+        }
+    }
+</script>
+
+</html>

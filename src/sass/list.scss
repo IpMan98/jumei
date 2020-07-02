@@ -1,0 +1,275 @@
+.con-center {
+    width: 1090px;
+    margin: 0 auto;
+    min-height: 100px;
+    // background-color: pink;
+
+    .breadcrumbs {
+
+        font-size: 12px;
+        clear: both;
+        height: 45px;
+        line-height: 45px;
+
+        a {
+            color: #666;
+        }
+    }
+
+    .pop_new_main {
+        width: 100%;
+        height: 748px;
+
+        .albums {
+            float: left;
+
+            .pro_img {
+                position: relative;
+                padding: 0;
+                width: 375px;
+                height: 500px;
+                .jqzoom{
+                    // overflow: hidden;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        left: -70%;
+                        z-index: -999px;
+                    }
+                }
+            }
+
+            .ac_container {
+                position: relative;
+                height: 122px;
+                margin-top: 14px;
+
+                ul {
+                    position: absolute;
+                    width: 300px;
+                    height: 104px;
+                    overflow: hidden;
+                    left: 38px;
+
+                    li {
+                        float: left;
+                        display: inline;
+                        margin-right: 9px;
+                        position: relative;
+                        height: 90px;
+                        width: 66px;
+                        border: 1px solid #535353;
+                        opacity: .5;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            position: absolute;
+                            left: -90%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pop_derail_top {
+            float: left;
+            padding: 0 0 0 70px;
+            position: relative;
+            width: 500px;
+
+            .dot_line {
+                font-size: 0;
+                width: 100%;
+                height: 0;
+                border-bottom: 1px dotted #c9c9c9;
+                margin: 14px 0;
+            }
+
+            h1 {
+                position: relative;
+                font-size: 18px;
+                font-family: '\5FAE\8F6F\96C5\9ED1 ';
+                line-height: 1.5;
+                color: #000;
+                padding-top: 38px;
+                font-weight: 700;
+            }
+
+            .pop_price {
+                margin: 20px auto 0 0;
+                color: #666;
+                position: relative;
+                overflow: hidden;
+
+                span {
+                    color: #232323;
+                    font-size: 38px;
+                    line-height: 1;
+                    font-family: arial;
+
+                    em {
+                        font-style: normal;
+                        font-size: 24px;
+                        font-family: arial;
+                        vertical-align: top;
+                        line-height: 1.4;
+                    }
+                }
+            }
+
+            .pop_rebates {
+                margin-top: 10px;
+                overflow: hidden;
+                zoom: 1;
+
+                ul {
+                    float: left;
+
+                    li {
+                        float: left;
+                        font-size: 12px;
+                        color: #999;
+
+                        span {
+                            color: #fff;
+                            background: #1e1e1e;
+                            float: left;
+                            margin-right: 10px;
+                            padding: 1px 2px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+            .pop_change {
+                line-height: 24px;
+                height: 24px;
+                // height: auto;
+                width: 380px;
+
+                .pop_tit {
+                    padding-right: 20px;
+                    float: left;
+                    color: #999;
+                    font-size: 12px;
+                }
+
+                .pop_black {
+                    float: left;
+                    position: relative;
+
+                    .free {
+                        font-size: 12px;
+                        font-style: normal;
+                        float: left;
+                        margin-top: 4px;
+                        background-color: #1e1e1e;
+                        font-family: '\5b8b\4f53';
+                        color: #fff;
+                        height: 17px;
+                        display: inline-block;
+                        line-height: 17px;
+                        padding: 0 5px;
+                    }
+                }
+
+                .commitment {
+                    display: inline-block;
+                    position: relative;
+                    top: 3px;
+                    left: -6px;
+                    _display: inline;
+                    width: 335px;
+                    height: auto;
+                    margin-bottom: 10px;
+
+                    li {
+                        font-size: 12px;
+                        float: left;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                        line-height: 18px;
+                        border-right: 1px solid #e5e5e5;
+                        margin-right: 10px;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+
+                        a {
+                            float: left;
+                            color: #666;
+                        }
+                    }
+
+                    ;
+                }
+            }
+
+            .dot_line_bottom {
+                margin-top: 25px;
+            }
+
+            .status_area {
+                .buy_btn {
+                    padding: 20px 0;
+
+                    a {
+                        width: 195px;
+                        height: 46px;
+                        border: 1px solid #e01558;
+                        background-color: #ed145b;
+                        color: #fff;
+                        display: block;
+                        text-align: center;
+                        font: 16px '\5FAE\8F6F\96C5\9ED1';
+                        line-height: 46px;
+
+                        i {
+                            background: url(http://a5.jmstatic.com/68bfda183cce275b/ie6_cart.png) no-repeat;
+                            width: 23px;
+                            height: 23px;
+                            top: 7px;
+                            display: inline-block;
+                            position: relative;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .pop_sold {
+                    color: #2e2d2d;
+                    font-family: '\5FAE\8F6F\96C5\9ED1';
+                    font-size: 12px;
+
+                    i {
+                        background: url(http://a3.jmstatic.com/c511bf0d7170fdda/pop_detail_icon.png) no-repeat;
+                        width: 17px;
+                        height: 17px;
+                        float: left;
+                        background-position: -148px -20px;
+                        margin: -3px 5px;
+                    }
+
+                    b {
+                        color: #f64e85;
+                        font-weight: 400;
+                        font-family: arial;
+                    }
+                }
+            }
+
+            .three_info_note {
+                margin: 12px 0 0;
+                font-size: 12px;
+                color: #666;
+                .three_business {
+                    color: #ed145b;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

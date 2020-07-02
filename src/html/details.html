@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body{
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <div class="header-top">
+            <ul class="header-left">
+                <li>欢迎来到聚美优品！</li>
+                <li>
+                    <a href="#">请登录</a>
+                </li>
+                <li>
+                    <a href="#">快速注册</a>
+                </li>
+            </ul>
+            <ul class="header-right">
+                <li>
+                    <a href="#">保证正品</a>
+                </li>
+                <li>
+                    <a href="#">订单查询</a>
+                </li>
+                <li>
+                    <a href="#">收藏的品牌</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="#">我的聚美</a>
+                </li>
+                <li>|</li>
+                <li>更多</li>
+            </ul>
+        </div>
+    </div>
+    <!-- logo & 搜索栏 -->
+    <div class="header-mid">
+        <div class="header-center">
+            <div class="logo">
+                <a href="#">
+                    <img src="../imgs/logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="shopcar">
+                <a href="#">
+                    <img src="../imgs/cart.gif" alt="">
+                    <span>购物车结算</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="header-botton">
+        <div class="nav">
+            <ul class="nav-left">
+                <li><a href="#" class="home">首页</a></li>
+                <li>
+                    <a href="#">极速免税店</a></li>
+                <li> <a href="#">母婴特卖</a></li>
+                <li> <a href="#">美妆商城</a></li>
+                <li> <a href="#">国际轻奢</a></li>
+                <li> <a href="#">服装运动</a></li>
+                <li> <a href="#">鞋包服饰</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a href="#">
+                        <img src="../imgs/z_01new.jpg" alt="">
+                    </a></li>
+                <li><a href="#">
+                        <img src="../imgs/z03.jpg" alt="">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="con-center">
+        <div class="breadcrumbs">
+            <a href="index.html">聚美首页</a>><a href="#">名品特卖</a>><a href="#" class="title">【聚美直发包邮】官方授权美国•确美同水宝宝纯净防</a>
+        </div>
+        <div class="pop_new_main">
+            <div class="albums">
+                <div class="pro_img">
+                    <div class="jqzoom">
+                        <img >
+                    </div>
+                </div>
+                <div class="ac_container">
+                    <ul class="container_ul">
+                        <li>
+                            <img >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pop_derail_top">
+                <h1 id="title-h1"></h1>
+                <div class="pop_price">
+                    <span><em>￥</em><b></b></span>
+                </div>
+                <div class="pop_rebates">
+                    <ul>
+                        <li><span>满赠</span>满138元赠【618特惠巨献】李佳琦推荐娜斯丽Nursery小小柚子卸妆啫喱85ml</li>
+                    </ul>
+                </div>
+                <div class="dot_line "></div>
+                <div class="pop_change clearfix">
+                    <span class="pop_tit ">运费</span>
+                    <span class="pop_black" id="freight"><em class="free">新人包邮<em></em></em></span>
+                </div>
+                <div class="dot_line dot_line_top "></div>
+                <div class="pop_change clearfix">
+                    <span class="pop_tit">服务</span>
+                    <ul class="commitment">
+                        <li><a href="#" target="_blank">质量保险</a></li>
+                        <li><a href="3" target="_blank">本商品支持7天无条件退货（拆封后不支持）</a></li>
+                        <!--退货政策-->
+                        <li><a href="#" target="_blank">本商品不支持换货</a></li>
+                        <!--            <li><a href="http://pop.jumei.com/i/pop/rule" target="_blank">满159包邮</a></li>-->
+                        <li><a href="#" target="_blank">闪电发货</a></li>
+                        <!-- 海淘判断 -->
+                    </ul>
+                </div>
+                <div class="dot_line dot_line_bottom"></div>
+                <div class="status_area">
+                    <div class="buy_btn">
+                        <a href="javascript:;">
+                            <i></i>
+                            加入购物车
+                        </a>
+                    </div>
+                    <span class="pop_sold"><i></i><b>7770</b>人已购买</span>
+                </div>
+                <div class="three_info_note">本商品非自营，由<span class="three_business">达信永金 (营业执照)</span>直接发货并提供售后服务，您在购买过程中有任何疑问可咨询聚美客服。</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <script src="../script/list.js"></script> -->
+    
+</body>
+   <script src="../script/ajax.js"></script>
+   <script>
+     var data = localStorage.getItem('id');
+     ajax({
+         url:'../imgs/details.php',
+         data: {
+            id: data
+        },
+         type:'post',
+         success:function(data){
+             var tit = document.querySelector('#title-h1');
+             var tit2 = document.querySelector('.title');
+             var price = document.querySelector('.pop_price span b');
+             var img1 = document.querySelector('.jqzoom img');
+             var img2 = document.querySelector('.container_ul li img');
+             var json = JSON.parse(data);
+             console.log(json.data);
+                tit.innerHTML = json.data.deal_tit;
+                tit2.innerHTML = json.data.deal_tit;
+                price.innerHTML = json.data.price_dis;
+                img1.setAttribute('src',json.data.deal_img);
+                img2.setAttribute('src',json.data.deal_img);
+                // console.log(img2)
+         }
+     })
+   </script>
+</html>
