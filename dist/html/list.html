@@ -15,7 +15,7 @@
         <div class="new_user">
             <div class="head_wrapper">
                 <ul class="head_list fl">
-                    <li><a href="#">
+                    <li><a href="index.html">
                             <img src="../imgs/smalllogo.png" alt="">
                         </a></li>
                     <li><a href="#">限时特卖</a></li>
@@ -25,8 +25,8 @@
                     <li style="background: none;"><a href="#">正品保证<i class="h_arrow"></i></a></li>
                 </ul>
                 <ul class="head_user fr">
-                    <li><a href="#">登录</a></li>
-                    <li><a href="#">注册</a></li>
+                    <li id="login"><a href="login.html" id="login_name">登录</a></li>
+                    <li><a href="registered.html">注册</a></li>
                     <li><a href="#">订单查询</a></li>
                     <li class="j_menu_arrow"><a href="#">我的聚美<i class="h_arrow"></i></a></li>
                     <li style="background: none;"><a href="#">更多<i class="h_arrow"></i></a></li>
@@ -129,7 +129,13 @@
         </div>
 </body>
 <script src="../script/ajax.js"></script>
+<script src="../script/cookie.js"></script>
 <script>
+     var loginName = document.querySelector("#login_name");
+
+     loginName.onclick = function(){
+         localStorage.setItem('page','list.html');
+     }
     var goodsList = document.querySelector("#goodslist");
 ajax({
     url:'../imgs/list2.php',
@@ -193,6 +199,22 @@ ajax({
        }
     }
 })
+    var user = getCookie('user');
+    var login = document.querySelector('#login')
+    console.log(user)
+    if (user) {
+        login.innerHTML = `
+        ${user}
+        <a href="list.html" id="out">退出</a>
+        `;
+        var out = document.querySelector('#out');
+        out.onclick = function () {
+            removeCookie('user');
+            removeCookie('pass');
+            location.href = 'index.html'
+        }
+    }
+
 </script>
 
 </html>

@@ -42,7 +42,7 @@
                 </div>
                 <div class="regis">
                     <div>
-                        <input type="text" placeholder="手机号" id="user">
+                        <input type="text" placeholder="用户名" id="user">
                         <p></p>
                     </div>
                     <div>
@@ -105,11 +105,14 @@
                 var json = JSON.parse(data);
                 console.log(json);
                 if(json.err === 0){
+                    var page = localStorage.getItem('page')
+                      console.log(page)
                       var d = new Date();
                       d.setDate(d.getDate()+7);
                       document.cookie = "user="+user.value+";expires="+d;
                       document.cookie = "pass="+pass.value+";expires="+d;
-                      location.href = "index.html"
+                      
+                      location.href = page;
                 }
             },
             error: function (err) {
